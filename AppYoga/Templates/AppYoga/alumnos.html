@@ -1,0 +1,25 @@
+{% extends "AppYoga/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+<form action="{% url 'alumnos' %}" method="POST">{% csrf_token %}
+
+    <p>NOMBRE:<input type="text" name="nombre" id="nombre"></p>
+    <p>APELLIDO:<input type="text" name="apellido" id="apellido"></p>
+    <p>DNI:<input type="number" name="dni" id="dni"></p>
+    <p><input type="submit" value="ENVIAR"></p>
+
+
+</form>
+
+{% endblock %}
+
+{% block titulo %}
+
+    <h1> Pagina de Alumnos </h1>
+
+
+{% endblock %}

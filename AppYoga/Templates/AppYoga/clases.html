@@ -4,7 +4,14 @@
 
 {% block contenidoQueCambia %}
 
+<form action="{% url 'clases' %}" method="POST">{% csrf_token %}
 
+    <p>NOMBRE:<input type="text" name="nombre" id="nombre"></p>
+    <p>DIAS:<input type="text" name="dias" id="dias"></p>
+    <p>HORARIOS:<input type="text" name="horarios" id="horarios"></p>
+    <p><input type="submit" value="ENVIAR"></p>
+
+</form>
 
 {% endblock %}
 

@@ -1,0 +1,28 @@
+{% extends "AppYoga/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Alumnos encontrados</h1>
+
+{% if alumnos %}
+
+{% for alumno in alumnos %}
+    <p>{{alumno.nombre}} {{alumno.apellido}}</p>
+
+{% endfor %}
+
+{% else %}
+    <p>No hay alumnos con ese apellido</p>
+
+{% endif %}
+
+{% endblock %}
+
+{% block titulo %}
+
+    <h1> RESULTADOS DE LA BUSQUEDA </h1>
+
+
+{% endblock %}

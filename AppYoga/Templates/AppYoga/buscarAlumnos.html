@@ -1,0 +1,29 @@
+{% extends "AppYoga/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>BUSQUEDA DE ALUMNOS</h1>
+
+<form action="{% url 'buscar' %}" method="GET">
+
+    <p><input type="text" name="apellido" id="apellido" placeholder="Buscar"></p>
+    <p><input type="submit" value="Buscar"></p>
+
+</form>
+
+{% if respuesta %}
+
+    <p>RESPUESTA</p>
+
+{% endif %}
+
+{% endblock %}
+
+{% block titulo %}
+
+    <h1> Pagina de Alumnos </h1>
+
+
+{% endblock %}
